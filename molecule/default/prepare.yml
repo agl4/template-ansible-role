@@ -1,0 +1,14 @@
+---
+- name: Prepare
+  hosts: all
+  gather_facts: "yes"
+  tasks:
+    - name: update repos on debian
+      ansible.builtin.apt:
+        update_cache: "yes"
+      when: ansible_distribution == "Debian"
+    - name: Install git
+      ansible.builtin.package:
+        name:
+          - git
+          - ca-certificates
