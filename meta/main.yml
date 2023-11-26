@@ -1,5 +1,5 @@
 galaxy_info:
-  role_name: ROLE_NAME
+  role_name: template_ansible_role
   description: ROLE_DESCRIPTION
   author: agoloncser
   license: BSD License
