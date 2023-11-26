@@ -2,4 +2,4 @@
 - name: Converge
   hosts: all
   roles:
-    - agoloncser.template-ansible-role
+    - agoloncser.template_ansible_role
