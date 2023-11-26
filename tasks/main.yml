@@ -1,1 +1,4 @@
 ---
+- name: Dummy debug message.
+  debug:
+    msg: "Dummy debug message."
