@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/agoloncser/template-ansible-role/compare/v1.0.0...v1.1.0) (2024-01-14)
+
+
+### Features
+
+* Add jinja2 to Pipfile ([ff65d2c](https://github.com/agoloncser/template-ansible-role/commit/ff65d2c5fb10533d56ecf25df1d939798f83ae4d))
+
 ## 1.0.0 (2024-01-14)
 
 
