@@ -1,0 +1,47 @@
+me: Workflow Sync
+
+on:
+  push:
+    branches:
+      - master
+env:
+  PULL_REQUEST: true
+  DRY_RUN: false
+  REPOSITORIES: |
+    agl4/ansible-role-emacs
+    agl4/ansible-role-git
+    agl4/ansible-role-git-config
+    agl4/ansible-role-github-ssh-keys
+    agl4/ansible-role-git-repos
+    agl4/ansible-role-gnupg
+    agl4/ansible-role-shell-fish
+    agl4/ansible-role-tailscale
+    agl4/ansible-role-ubuntu-ppa
+
+  WORKFLOW_FILES: |
+    .gitattributes
+    .gitignore
+    Pipfile
+    Pipfile.lock
+    .prettierrc.yml
+    release-please-config.json
+    renovate.json
+    .tool-versions
+    .yamllint
+    .github/workflows/molecule.yml
+    .github/workflows/github-super-linter.yml
+    .github/workflows/release-please.yml
+
+jobs:
+  Github_Workflow_Sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetching Local Repository
+        uses: actions/checkout@master
+      - name: Running Workflow Sync
+        uses: varunsridharan/action-github-workflow-sync@main
+        with:
+          DRY_RUN: ${{ env.DRY_RUN }}
+          REPOSITORIES: ${{ env.REPOSITORIES }}
+          WORKFLOW_FILES: ${{ env.WORKFLOW_FILES }}
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
