@@ -1,9 +1,9 @@
-me: Workflow Sync
+name: Workflow Sync
 
 on:
   push:
     branches:
-      - master
+      - main
 env:
   PULL_REQUEST: true
   DRY_RUN: false
