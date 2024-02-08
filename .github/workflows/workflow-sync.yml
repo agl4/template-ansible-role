@@ -19,6 +19,9 @@ env:
     agl4/ansible-role-ubuntu-ppa
 
   WORKFLOW_FILES: |
+    .github/workflows/molecule.yml
+    .github/workflows/github-super-linter.yml
+    .github/workflows/release-please.yml
     .gitattributes
     .gitignore
     Pipfile
@@ -27,10 +30,7 @@ env:
     release-please-config.json
     renovate.json
     .tool-versions
-    .yamllint
-    .github/workflows/molecule.yml
-    .github/workflows/github-super-linter.yml
-    .github/workflows/release-please.yml
+    .yamllint.yml
 
 jobs:
   Github_Workflow_Sync:
