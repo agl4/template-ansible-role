@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.0](https://github.com/agl4/template-ansible-role/compare/v1.1.0...v2.0.0) (2024-02-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* Fix python version and username in molecule pipeline
+
+### Features
+
+* Fix python version and username in molecule pipeline ([202a706](https://github.com/agl4/template-ansible-role/commit/202a70677b14d64e62f518ade3e242d6a61dede5))
+* Reused pipeline ([c0866e9](https://github.com/agl4/template-ansible-role/commit/c0866e92aff62de43c65a54eaf03f39983c70d73))
+
 ## [1.1.0](https://github.com/agoloncser/template-ansible-role/compare/v1.0.0...v1.1.0) (2024-01-14)
 
 
